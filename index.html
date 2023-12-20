@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/main.js"></script>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main class="form">
+        <div class="container">
+            <div class="textos">
+                <!-- Titulo principal -->
+                <h2>Welcome Page</h2>
+                <!-- información -->
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum alias, maxime voluptatibus dolor fugit.</span>
+                <!-- Titulo secundario -->
+                <h5>GET CONNECTED WITH</h5>
+            </div>
+                            <!-- Iconos -->
+            <div class="icons">
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="/static/img/5279123_tweet_twitter_twitter logo_icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="/static/img/5279112_camera_instagram_social media_instagram logo_icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="/static/img/5305154_fb_facebook_facebook logo_icon.png" alt="">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Formulario -->
+        <div class="section">
+            <!-- Titulo del formulario -->
+            <h2>Register</h2>
+            <form id="formulario" action="" method="">
+                <!-- Campo de User name -->
+                <div class="input-tools">
+                    <label for="user" class="details">User name</label>
+                    <input id="user" type="text" placeholder="Sanoj">
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Campo de Email -->
+                <div class="input-tools">
+                    <label for="email" class="details">Email</label>
+                    <input id="email" type="email" placeholder="sanoj@gmail.com" >
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Campo de Number -->
+                <div class="input-tools">
+                    <label for="number" class="details">Contact Number</label>
+                    <input id="number" type="tel" pattern="[0-9]*" inputmode="numeric" placeholder="300 000 0000">
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Campo de address -->
+                <div class="input-tools">
+                    <label for="add" class="details">Address</label>
+                    <input id="add" type="text" placeholder="Cra 190 bis Sur # 45" >
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Campo de password -->
+                <div class="input-tools">
+                    <label for="pass" class="details">Password</label>
+                    <input id="pass" type="password" placeholder="* * * * * * * * * * *" >
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Campo de Confirm Paswword -->
+                <div class="input-tools">
+                    <label for="passConfirma" class="details">Confirm Password</label>
+                    <input id="passConfirma" type="password" placeholder="* * * * * * * * * * *" >
+                    <p class="mensaje-error-general"></p>
+                </div>
+                <!-- Botones -->
+                <div class="buttons">
+                    <div class="button-cancel" id="b1">
+                        <input type="submit"  value="Cancel">
+                    </div>
+                    <div class="button-register" id="b2">
+                        <input type="submit" value="Register">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

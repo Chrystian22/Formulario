@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Roboto:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: darkblue;
+}
+
+.form{
+    display: flex;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    height: 550px;
+    width: 970px;
+    box-shadow: 0 0 10px 0 rgb(21, 21, 172);
+    /* margin-left: 45px; */
+    /* transition: all 1s ease; */
+}
+
+.container{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/texture.png);
+    background-size: cover;
+}
+
+.textos{
+    color: #fff;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.textos h2{
+    margin: 180px 0 30px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.textos span{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #E4E4E4;
+}
+
+.textos h5{
+    margin-top: 150px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.icons{
+    margin: 20px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icons img{
+    max-width: 70px;
+    height: auto;
+    padding: 10px;
+}
+
+
+/*Segundo articulo*/
+
+.section{
+    background-color: #fff;
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section h2{
+    color: 222222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 40px 30px 10px 30px;
+}
+
+#formulario{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.input-tools{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 30px;
+}  
+
+.details{
+    display: block;
+    font-size: 12px;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+.input-tools input{
+    background-color: #FAFAFA;
+    border: solid #EAEDF1;
+    border-radius: 3px;
+    padding-left: 15px;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-tools input:valid,
+.input-tools input:focus{
+    border: solid darkgrey;
+    color: black;
+}
+
+.input-falla input{
+    margin-bottom: 30px;
+    border-radius: 3px;
+    padding-left: 15px;
+    width: 270px;
+    height: 50px;
+    outline: none;
+    border: solid red;
+}
+
+.input-ok input{
+    margin-bottom: 30px;
+    border-radius: 3px;
+    padding-left: 15px;
+    width: 270px;
+    height: 50px;
+    outline: none;
+    border: solid green;
+    background-color: rgb(231, 255, 207);
+    transition: all 0.3s ease;
+}
+
+p{
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+    margin-top: -30px;
+}
+
+.input-falla p{
+    visibility: visible;
+    color: red;
+} 
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttons input{
+    width: 285px;
+    height: 50px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.button-cancel input{
+    border: solid #0B2349;
+    color: #0B2349;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.button-cancel input:hover{
+    border: solid #90a3c1de;
+    background: #90a3c1de;
+    transition: all 0.5s ease;
+}
+
+.button-register input{
+    border: solid #0B2349;
+    color: #fff;
+    background: #0B2349;
+    transition: all 0.3s ease;
+}
+
+.button-register input:hover{
+    background: #1b3b6ede;
+    border: none;
+    box-shadow: 0px 0px 10px 0px #0B2349;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 770px){
+    
+    .form{
+        display: flex;
+        flex-direction: column;
+        margin-top: -500px;
+    }
+
+    .formulario{
+        margin-bottom: 15px;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textos h2{
+        font-size: 50px;
+    }
+    
+    .textos span{
+        margin: 100px;
+        font-size: 22px;
+    }
+    
+    .textos h5{
+        font-size: 22px;
+    }
+
+    .icons{
+        margin: 30px 0 60px 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .icons img{
+        max-width: 70px;
+        padding: 10px;
+    }
+
+    .section{
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .input-tools{
+        width: 100%;
+        margin-bottom: 30px;
+    }  
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px){
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        margin-top: -400px;
+    }
+
+    .formulario{
+        margin-bottom: 15px;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textos h2{
+        margin: 10px;
+        font-size: 35px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .textos span{
+        margin: 10px;
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .textos h5{
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .icons{
+        margin: 30px 0 60px 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .icons img{
+        max-width: 70px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .section{
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .input-tools{
+        width: 100%;
+        margin-bottom: 30px;
+    }  
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px){
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        margin-top: -150px;
+    }
+
+    
+}
+
+@media (max-width: 285px){
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        margin-top: -100px;
+    }
+
+    
+}
