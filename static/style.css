@@ -236,7 +236,7 @@ p{
     }
     
     .textos span{
-        margin: 100px;
+        margin: 50px !important;
         font-size: 22px;
     }
     
@@ -315,10 +315,10 @@ p{
     .textos span{
         margin: 10px;
         font-size: 15px;
-        margin-bottom: 50px;
     }
 
     .textos h5{
+        margin-top: 50px !important;
         margin: 10px;
         font-size: 15px;
     }
