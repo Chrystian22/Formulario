@@ -1,11 +1,14 @@
+/* Importación de fuentes mediante GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Roboto:wght@700&display=swap');
 
+/* Estilo del documento */
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Contenedor del documento */
 body{
     display: flex;
     align-items: center;
@@ -14,6 +17,7 @@ body{
     background-color: darkblue;
 }
 
+/* Main */
 .form{
     display: flex;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
@@ -24,6 +28,7 @@ body{
     /* transition: all 1s ease; */
 }
 
+/* Contenedor primera sección */
 .container{
     width: 34%;
     display: flex;
@@ -35,6 +40,7 @@ body{
     background-size: cover;
 }
 
+/* Textos */
 .textos{
     color: #fff;
     width: 100%;
@@ -61,6 +67,7 @@ body{
     font-weight: 700;
 }
 
+/* Iconos */
 .icons{
     margin: 20px 0 60px 0;
     display: flex;
@@ -75,7 +82,7 @@ body{
 }
 
 
-/*Segundo articulo*/
+/*Segundo contenedor*/
 
 .section{
     background-color: #fff;
@@ -92,6 +99,8 @@ body{
     margin: 40px 30px 10px 30px;
 }
 
+/* Cuerpo del formulario */
+
 #formulario{
     width: 100%;
     height: 80%;
@@ -104,11 +113,13 @@ body{
     font-size: 15px;
 }
 
+/* Dividir ancho del contenedor en 2 */
 .input-tools{
     width: calc(100% / 2 - 20px);
     margin-bottom: 30px;
 }  
 
+/* Nombre de los campos del formulario*/
 .details{
     display: block;
     font-size: 12px;
@@ -116,6 +127,7 @@ body{
     margin-bottom: 10px;
 }
 
+/* Campos del formulario */
 .input-tools input{
     background-color: #FAFAFA;
     border: solid #EAEDF1;
@@ -127,12 +139,14 @@ body{
     transition: all 0.3s ease;
 }
 
+/* Campos al validar */
 .input-tools input:valid,
 .input-tools input:focus{
     border: solid darkgrey;
     color: black;
 }
 
+/* Campos falla del validado */
 .input-falla input{
     margin-bottom: 30px;
     border-radius: 3px;
@@ -143,6 +157,7 @@ body{
     border: solid red;
 }
 
+/* Campos Ok del validado */
 .input-ok input{
     margin-bottom: 30px;
     border-radius: 3px;
@@ -155,6 +170,7 @@ body{
     transition: all 0.3s ease;
 }
 
+/* Texto al fallo del validado */
 p{
     visibility: hidden;
     position: absolute;
@@ -169,6 +185,7 @@ p{
     color: red;
 } 
 
+/* Botones Cancel y Register */
 .buttons{
     display: flex;
     width: 100%;
@@ -186,6 +203,7 @@ p{
     border-radius: 3px;
 }
 
+/* Boton Cancel */
 .button-cancel input{
     border: solid #0B2349;
     color: #0B2349;
@@ -199,6 +217,7 @@ p{
     transition: all 0.5s ease;
 }
 
+/* Boton Register */
 .button-register input{
     border: solid #0B2349;
     color: #fff;
@@ -213,15 +232,16 @@ p{
     transition: all 0.3s ease;
 }
 
+/* Responsives */
 @media (max-width: 770px){
     
     .form{
         display: flex;
         flex-direction: column;
-        margin-top: -400px;
+        margin-top: -200px;
     }
 
-    .formulario{
+    #formulario{
         margin-bottom: 15px;
     }
 
@@ -274,6 +294,19 @@ p{
     .input-tools{
         width: 100%;
         margin-bottom: 30px;
+    }
+    
+    .input-tools input{
+        display: block;
+        width: 100%;
+    }
+
+    .input-falla input{
+        margin-bottom: 30px;
+        border-radius: 3px;
+        width: 100%;
+        height: 50px;
+        outline: none;
     }  
 
     .buttons{
@@ -295,7 +328,7 @@ p{
         margin-top: -380px;
     }
 
-    .formulario{
+    #formulario{
         margin-bottom: 15px;
     }
 
@@ -354,7 +387,16 @@ p{
     .input-tools{
         width: 100%;
         margin-bottom: 30px;
-    }  
+    } 
+    
+    .input-falla input{
+        margin-bottom: 30px;
+        border-radius: 3px;
+        padding-left: 15px;
+        width: 100%;
+        height: 50px;
+        outline: none;
+    }
 
     .buttons{
         display: flex;
