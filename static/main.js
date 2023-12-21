@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    // Obtener elementos del formulario mediante el id
     const form = document.getElementById('formulario')
     const usuario = document.getElementById('user')
     const email = document.getElementById('email')
@@ -7,32 +8,56 @@ window.addEventListener('load', () => {
     const pass = document.getElementById('pass')
     const passConfirma = document.getElementById('passConfirma')
     const btnCancelar = document.getElementById('b1')
+    const eye1 = document.querySelector('#eye1')
+    const eye2 = document.getElementById('eye2')
+
+    //Objeto con datos a guardar del formulario
+    const datos = {}
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
+
+        datos['User Name'] = usuario.value 
+        datos['Email'] = email.value 
+        datos['Contact Number'] = number.value 
+        datos['Address'] = address.value 
+        datos['Password'] = pass.value 
+        datos['ConfirmPassword'] = passConfirma.value 
+
+        console.log(datos)
+
+
         validaCampos()
     })
 
-
-    btnCancelar.addEventListener('click', () => {
-        clearErrorMessages()
-        usuario.value = ''
-        email.value = ''
-        number.value = ''
-        address.value = ''
-        pass.value = ''
-        passConfirma.value = ''
+    // Función para ver contraseña
+    eye1.addEventListener('click', function(){
+        if(pass.type == "password"){
+            pass.type = "text"
+            eye1.style.opacity = 0.8
+        }else{
+            pass.type = "password"
+            eye1.style.opacity = 0.2
+        }
     })
 
-    btnCancelar.addEventListener("click", function () {
-        // Limpiar solo los mensajes de error
-        const inputs = document.querySelectorAll(".input-tools input");
-        for (const input of inputs) {
-            input.classList.remove("input-falla");
+    eye2.addEventListener('click', () =>{
+        if(passConfirma.type == "password"){
+            passConfirma.type = "text"
+            eye2.style.opacity = 0.8
+        }else{
+            passConfirma.type = "password"
+            eye2.style.opacity = 0.2
         }
-    });
+    })
 
+    // Función para hacer reset al formulario
+    btnCancelar.addEventListener('click', (e) => {
+        e.preventDefault();
+        form.reset();
+    })
 
+    // Función para validacion de los campos del formulario
     const validaCampos = () => {
         //capturar los valores ingresados por el usuario
         const usuarioValor = usuario.value.trim()
@@ -65,6 +90,8 @@ window.addEventListener('load', () => {
         //validando campo numero
         if (!numberValor) {
             validaFalla(number, 'Campo vacio')
+        }else if(isNaN(numberValor)){
+            validaFalla(number, 'Debe ser un numero telefonico')
         } else if (numberValor.length < 10 || numberValor.length > 10) {
             validaFalla(number, 'Debe tener 10 digitos')
         } else {
@@ -126,6 +153,7 @@ window.addEventListener('load', () => {
 
     }
 
+    // Función de fallo en la validacion
     const validaFalla = (input, msje) => {
         const formControl = input.parentElement
         const aviso = formControl.querySelector('p')
@@ -133,20 +161,16 @@ window.addEventListener('load', () => {
         formControl.className = 'input-falla'
     }
 
+    // Función de fallo en la validacion
     const validaOk = (input) => {
         const formControl = input.parentElement
         formControl.className = 'input-ok'
     }
 
+    // Expersiones regulares para la validación del email
     const validaEmail = (email) => {
         return /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
-
-    document.querySelector("#b1").addEventListener("click", function () {
-        // Limpia los mensajes de error
-        for (const input of document.querySelectorAll(".input-tools input")) {
-            input.classList.remove("input-falla");
-        }
-    });
+    
 
 })
