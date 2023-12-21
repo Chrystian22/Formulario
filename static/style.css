@@ -42,12 +42,12 @@ body{
 
 /* Textos */
 .textos{
-    color: #fff;
     width: 100%;
     padding: 0 30px;
 }
 
 .textos h2{
+    color: #fff;
     margin: 180px 0 30px 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -61,6 +61,7 @@ body{
 }
 
 .textos h5{
+    color: #fff;
     margin-top: 150px;
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
@@ -85,39 +86,68 @@ body{
 /*Segundo contenedor*/
 
 .section{
+    /* border: 3px solid red; */
     background-color: #fff;
     width: 66%;
     display: flex;
     flex-direction: column;
 }
 
-.section h2{
+/* Titulo Register */
+.register{
+    /* border: 4px solid rgb(0, 221, 255); */
+    height: 15%;
+}
+
+
+.register h2{
     color: 222222;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin: 40px 30px 10px 30px;
+    margin: 35px 35px;
 }
 
 /* Cuerpo del formulario */
 
 #formulario{
+    /* border: 5px solid rgb(245, 0, 233); */
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
-    justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 15px;
 }
 
-/* Dividir ancho del contenedor en 2 */
+.caja1,
+.caja2{
+    /* border: 5px solid rgb(95, 230, 95); */
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Campos del formulario */
 .input-tools{
-    width: calc(100% / 2 - 20px);
-    margin-bottom: 30px;
+    position: relative;
+    /* border: solid #0B2349; */
+    margin-top: 20px;
+    margin-bottom: 15px;
 }  
+
+#tools1{
+    margin-left: 20px;
+    width: 85%;
+}
+
+#tools2{
+    margin-right: 20px;
+    width: 85%;
+}
 
 /* Nombre de los campos del formulario*/
 .details{
@@ -127,13 +157,14 @@ body{
     margin-bottom: 10px;
 }
 
-/* Campos del formulario */
+/* Inputs */
 .input-tools input{
+    position: relative;
     background-color: #FAFAFA;
     border: solid #EAEDF1;
     border-radius: 3px;
     padding-left: 15px;
-    height: 50px;
+    height: 45px;
     width: 100%;
     outline: none;
     transition: all 0.3s ease;
@@ -147,37 +178,93 @@ body{
 }
 
 /* Campos falla del validado */
+
+.input-falla, .campo1 , .campo2{
+    position: relative;
+    margin-top: 20px;
+}
+
 .input-falla input{
-    margin-bottom: 30px;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
     border-radius: 3px;
     padding-left: 15px;
-    width: 270px;
-    height: 50px;
+    width: 100%;
+    height: 45px;
     outline: none;
     border: solid red;
 }
 
 /* Campos Ok del validado */
 .input-ok input{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 3px;
     padding-left: 15px;
-    width: 270px;
-    height: 50px;
+    width: 100%;
+    height: 45px;
     outline: none;
     border: solid green;
     background-color: rgb(231, 255, 207);
     transition: all 0.3s ease;
 }
 
+.input-ok, .campo1 , .campo2{
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Ojo contraseña */
+.ojo{
+    position: absolute;
+    height: 25%;
+    right: 10px;
+    top: 57%;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.ojo:hover{
+    opacity: 0.8;
+}
+
+/* Ojo al fallo */
+.input-falla .ojo{
+    position: absolute;
+    height: 25%;
+    right: 10px;
+    top: 40%;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.input-falla .ojo:hover{
+    opacity: 0.8;
+}
+
+/* Ojo al Ok */
+.input-ok .ojo{
+    position: absolute;
+    height: 25%;
+    right: 10px;
+    top: 40%;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.input-ok .ojo:hover{
+    opacity: 0.8;
+}
+
 /* Texto al fallo del validado */
 p{
+    width: 250px;
     visibility: hidden;
     position: absolute;
     font-size: small;
     font-weight: 500;
-    text-align: right;
-    margin-top: -30px;
+    text-align: left;
+    margin-top: -20px;
+    text-wrap: wrap;
 }
 
 .input-falla p{
@@ -187,15 +274,36 @@ p{
 
 /* Botones Cancel y Register */
 .buttons{
+    /* border: 5px solid rgb(68, 170, 68); */
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    height: 25%;
+    align-items: start;
+    justify-content: center;
 }
 
+.button1, .button2{
+    margin-top: 10px;
+    /* border: solid yellow;; */
+}
+
+/* Button Cancel para separar*/
+.button1{
+    margin-right: 5px;
+    width: 44%;
+}
+
+/* Button Register para separar*/
+.button2{
+    margin-left: 5px;
+    width: 44%;
+}
+
+/* Inputs buttons */
 .buttons input{
-    width: 285px;
+    width: 100%;
     height: 50px;
-    margin-top: 20px;
+    padding: 0 85px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 15px;
@@ -232,7 +340,7 @@ p{
     transition: all 0.3s ease;
 }
 
-/* Responsives */
+/* Responsives solo de prueba*/
 @media (max-width: 770px){
     
     .form{
@@ -328,34 +436,31 @@ p{
         margin-top: -380px;
     }
 
-    #formulario{
-        margin-bottom: 15px;
-    }
-
+    
     .container{
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-
+    
     .textos h2{
         margin: 10px;
         font-size: 35px;
         margin-top: 80px;
         margin-bottom: 50px;
     }
-
+    
     .textos span{
         margin: 10px;
         font-size: 15px;
     }
-
+    
     .textos h5{
         margin-top: 50px !important;
         margin: 10px;
         font-size: 15px;
     }
-
+    
     .icons{
         margin: 30px 0 60px 0;
         display: flex;
@@ -368,10 +473,16 @@ p{
         height: auto;
         padding: 10px;
     }
-
+    
     .section{
         background-color: #fff;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formulario{
+        margin-bottom: 15px;
         display: flex;
         flex-direction: column;
     }
@@ -417,7 +528,14 @@ p{
         margin-top: -400px;
     }
 
-    
+    .input-falla input{
+        margin-bottom: 30px;
+        border-radius: 3px;
+        padding-left: 15px;
+        max-width: 100%;
+        height: 50px;
+        outline: none;
+    }
 }
 
 @media (max-width: 285px){
