@@ -17,7 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Construye el proyecto (opcional, depende del lenguaje)
-                sh 'echo "Construcción completada"'
+                sh 'echo "Construcción completada con exito"'
             }
         }
 
