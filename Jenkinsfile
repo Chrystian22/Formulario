@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = 'us-east-1' // Cambia según tu región
+        AWS_REGION = 'us-east-2' // Cambia según tu región
         S3_BUCKET = 'sitio-estatico-devops' // Cambia por tu bucket S3
     }
 
